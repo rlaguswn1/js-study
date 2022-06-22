@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="alert-box" id="alert">
+        <p id="text">아이디를 입력 안하셨어요</p>
+        <button id="close">X</button>
+    </div>
+    <!--onclick: 모든 html 요소에 부여 가능, 클릭시 ""안의 자바스크립트를 실행해라-->
+    <button onclick="alertdisplay('alert', 'block', 'text', '아이디를 입력안하셨어요')">열기1</button>
+    <!-- <button onclick="alertdisplay('alert', 'none', '', '')">닫기1</button> -->
+    <button onclick="alertdisplay('alert', 'block', 'text', '비밀번호를 입력안하셨어요')">열기2</button>
+    <!-- <button onclick="alertdisplay('alert', 'none', '', '')">닫기2</button> -->
+
+    <script>
+        function alertdisplay(a, b, c, d) {
+            document.getElementById(a).style.display = b;
+            document.getElementById(c).innerHTML = d;
+        }
+
+        // close가 click되면(이벤트가 실행되면) function 내 코드를 실행해주세요
+        // html에 뭐 추가로 안써도 된다는 장점
+        document.getElementById('close').addEventListener('mouseover', function(){
+            document.getElementById('alert').style.display = 'none';
+        })
+    </script>
+    
+</body>
+</html>
