@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="hello">안녕하세요</h2>
+    <h2 id="hi">올때 메로나</h2>
+    <h2 id="hw">글씨를 키워보아요</h2>
+    <script>
+        /* 문서에서 id가 hello인 html 요소를 가져와.그 html 내부를 안녕으로 바꿔줘
+        document.getElementById('??').
+        점 뒤쪽만 잘 채우면 html을 조작할 수 있다
+        점 앞쪽은 selector라고 부른다
+        근데 점 뒤쪽은 대부분 구글 검색. 다 외울수 없어
+        */
+        document.getElementById('hello').innerHTML = '안녕';
+        document.getElementById('hi').innerHTML = '올때 바밤바';
+        document.getElementById('hw').style.fontSize="30px";
+        document.getElementById('hw').style.color='blue';
+
+    </script>
+</body>
+</html>
